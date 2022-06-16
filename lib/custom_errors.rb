@@ -6,7 +6,7 @@ class Person
   end
 
   def get_married(person)
-    if Person.is_a?(Person)
+    if person.is_a?(Person)
       self.partner = person
       person.partner = self
     else
@@ -16,7 +16,6 @@ class Person
         puts error.message
       end
     end
-    
   end
 
   class PartnerError < StandardError
